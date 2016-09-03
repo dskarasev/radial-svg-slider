@@ -1,0 +1,48 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+.cd-radial-slider-wrapper, .cd-radial-slider-wrapper div, .cd-radial-slider-wrapper span, .cd-radial-slider-wrapper applet, .cd-radial-slider-wrapper object, .cd-radial-slider-wrapper iframe,
+.cd-radial-slider-wrapper h1, .cd-radial-slider-wrapper h2, .cd-radial-slider-wrapper h3, .cd-radial-slider-wrapper h4, .cd-radial-slider-wrapper h5, .cd-radial-slider-wrapper h6, .cd-radial-slider-wrapper p, .cd-radial-slider-wrapper blockquote, .cd-radial-slider-wrapper pre,
+.cd-radial-slider-wrapper a, .cd-radial-slider-wrapper abbr, .cd-radial-slider-wrapper acronym, .cd-radial-slider-wrapper address, .cd-radial-slider-wrapper big, .cd-radial-slider-wrapper cite, .cd-radial-slider-wrapper code,
+.cd-radial-slider-wrapper del, .cd-radial-slider-wrapper dfn, .cd-radial-slider-wrapper em, .cd-radial-slider-wrapper img, .cd-radial-slider-wrapper ins, .cd-radial-slider-wrapper kbd, .cd-radial-slider-wrapper q, .cd-radial-slider-wrapper s, .cd-radial-slider-wrapper samp,
+.cd-radial-slider-wrapper small, .cd-radial-slider-wrapper strike, .cd-radial-slider-wrapper strong, .cd-radial-slider-wrapper sub, .cd-radial-slider-wrapper sup, .cd-radial-slider-wrapper tt, .cd-radial-slider-wrapper var,
+.cd-radial-slider-wrapper b, .cd-radial-slider-wrapper u, .cd-radial-slider-wrapper i, .cd-radial-slider-wrapper center,
+.cd-radial-slider-wrapper dl, .cd-radial-slider-wrapper dt, .cd-radial-slider-wrapper dd, .cd-radial-slider-wrapper ol, .cd-radial-slider-wrapper ul, .cd-radial-slider-wrapper li,
+.cd-radial-slider-wrapper fieldset, .cd-radial-slider-wrapper form, .cd-radial-slider-wrapper label, .cd-radial-slider-wrapper legend,
+.cd-radial-slider-wrapper table, .cd-radial-slider-wrapper caption, .cd-radial-slider-wrapper tbody, .cd-radial-slider-wrapper tfoot, .cd-radial-slider-wrapper thead, .cd-radial-slider-wrapper tr, .cd-radial-slider-wrapper th, .cd-radial-slider-wrapper td,
+.cd-radial-slider-wrapper article, .cd-radial-slider-wrapper aside, .cd-radial-slider-wrapper canvas, .cd-radial-slider-wrapper details, .cd-radial-slider-wrapper embed, 
+.cd-radial-slider-wrapper figure, .cd-radial-slider-wrapper figcaption, .cd-radial-slider-wrapper footer, .cd-radial-slider-wrapper header, .cd-radial-slider-wrapper hgroup, 
+.cd-radial-slider-wrapper menu, .cd-radial-slider-wrapper nav, .cd-radial-slider-wrapper output, .cd-radial-slider-wrapper ruby, .cd-radial-slider-wrapper section, .cd-radial-slider-wrapper summary,
+.cd-radial-slider-wrapper time, .cd-radial-slider-wrapper mark, .cd-radial-slider-wrapper audio, .cd-radial-slider-wrapper video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+.cd-radial-slider-wrapper article, .cd-radial-slider-wrapper aside, .cd-radial-slider-wrapper details, .cd-radial-slider-wrapper figcaption, .cd-radial-slider-wrapper figure, 
+.cd-radial-slider-wrapper footer, .cd-radial-slider-wrapper header, .cd-radial-slider-wrapper hgroup, .cd-radial-slider-wrapper menu, .cd-radial-slider-wrapper nav, .cd-radial-slider-wrapper section, .cd-radial-slider-wrapper main {
+	display: block;
+}
+.cd-radial-slider-wrapper body {
+	line-height: 1;
+}
+.cd-radial-slider-wrapper ol, .cd-radial-slider-wrapper ul {
+	list-style: none;
+}
+.cd-radial-slider-wrapper blockquote, .cd-radial-slider-wrapper q {
+	quotes: none;
+}
+.cd-radial-slider-wrapper blockquote:before, .cd-radial-slider-wrapper blockquote:after,
+.cd-radial-slider-wrapper q:before, .cd-radial-slider-wrapper q:after {
+	content: '';
+	content: none;
+}
+.cd-radial-slider-wrapper table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
