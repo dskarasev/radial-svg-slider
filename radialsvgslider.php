@@ -104,11 +104,31 @@ function rsvgs_function($slideshow_attr) {
             'terms' => $slideshow_slug
         ) )
     );
-    $result = '<div class="cd-radial-slider-wrapper">';
-    $result .= '<ul class="cd-radial-slider" data-radius1="60" data-radius2="1364" data-centerx1="110" data-centerx2="1290">';
- 
-    //the loop
     $loop = new WP_Query($args);
+    
+    $result = '<div class="cd-radial-slider-wrapper">';
+    
+    //fallback for screen reader
+    $result .= '<div class="carousel-fallback>';
+    $result .= '<h2>Featured content</h2>';
+    $result .= '<ul>'
+    ////the loop
+    while ($loop->have_posts()) {
+        $loop->the_post();
+        $result .= '<li><h3>' . get_the_title() . '</h3>';
+        $alt = get_post_meta(get_post_thumbnail_id($post->ID), '_wp_attachment_image_alt', true);
+        if (count($alt)) {
+            $result .= '<p>Image description:' . $alt . '</p>';
+        }
+        $result .= '<p>' . get_the_content() . '</p>';
+        $result .= '<a href="' . get_field('button_url') . '">' . get_field('button_text') . '</a>'        
+        $result .= '</li>';
+    }
+    $result .= '</ul></div>';
+    
+    //slideshow
+    $result .= '<ul class="cd-radial-slider" data-radius1="60" data-radius2="1364" data-centerx1="110" data-centerx2="1290">';
+    ////the loop    
     $post_index = 0;
     while ($loop->have_posts()) {
         $post_index++;
