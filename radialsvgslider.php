@@ -3,6 +3,8 @@
     Plugin Name: Radial Svg Slider
     Description: WordPress plugin from Radial SVG Slider by CodyHouse.co
     Author: Antonio Trifirò
+    Text-domain: radial-svg-slider
+    Domain path: /languages
     Version: 1.0
 */
 
@@ -12,20 +14,19 @@ function rsvgs_init() {
     
     // Create custom post type
     $cpt_labels = array(
-		'name'               => 'Slides',
-		'singular_name'      => 'Slide',
+		'name'               => esc_html__('Slides', 'radial-svg-slider'),
+		'singular_name'      => esc_html__('Slide', 'radial-svg-slider'),
 		'menu_name'          => 'Radial SVG Slideshows',
 		'name_admin_bar'     => 'Radial SVG Slideshow',
-		'add_new'            => 'Add New',
-		'add_new_item'       => 'Add New Slide',
-		'new_item'           => 'New Slide',
-		'edit_item'          => 'Edit Slide',
-		'view_item'          => 'View Slide',
-		'all_items'          => 'All Slide',
-		'search_items'       => 'Search Slide',
-		'parent_item_colon'  => 'Parent Slide:',
-		'not_found'          => 'No slide found.',
-		'not_found_in_trash' => 'No slide found in Trash.'
+		'add_new'            => esc_html__('Add New', 'radial-svg-slider'),
+		'add_new_item'       => esc_html__('Add New Slide', 'radial-svg-slider'),
+		'new_item'           => esc_html__('New Slide', 'radial-svg-slider'),
+		'edit_item'          => esc_html__('Edit Slide', 'radial-svg-slider'),
+		'view_item'          => esc_html__('View Slide', 'radial-svg-slider'),
+		'all_items'          => esc_html__('All Slide', 'radial-svg-slider'),
+		'search_items'       => esc_html__('Search Slide', 'radial-svg-slider'),
+		'not_found'          => esc_html__('No slide found.', 'radial-svg-slider'),
+		'not_found_in_trash' => esc_html__('No slide found in Trash.', 'radial-svg-slider')
 	);
     $args = array(
         'public' => true,
@@ -42,14 +43,14 @@ function rsvgs_init() {
     
     // Create custom taxonomy
     $labels = array(
-        'name'          => 'Slideshows',
-        'singular_name' => 'Slideshow',
-        'all_items'     => 'All Slideshows',
-        'edit_item'     => 'Edit Slideshow',
-		'update_item'   => 'Update Slideshow',
-		'add_new_item'  => 'Add New Slideshow',
-		'new_item_name' => 'New Slideshow',
-		'menu_name'     => 'Slideshows'
+        'name'          => esc_html__('Slideshows', 'radial-svg-slider'),
+        'singular_name' => esc_html__('Slideshow', 'radial-svg-slider'),
+        'all_items'     => esc_html__('All Slideshows', 'radial-svg-slider'),
+        'edit_item'     => esc_html__('Edit Slideshow', 'radial-svg-slider'),
+		'update_item'   => esc_html__('Update Slideshow', 'radial-svg-slider'),
+		'add_new_item'  => esc_html__('Add New Slideshow', 'radial-svg-slider'),
+		'new_item_name' => esc_html__('New Slideshow', 'radial-svg-slider'),
+		'menu_name'     => esc_html__('Slideshows', 'radial-svg-slider')
     );
     register_taxonomy( 'rsvgslideshow', 'rsvgs_slides', array(
 		'hierarchical' => false,
@@ -110,15 +111,15 @@ function rsvgs_function($slideshow_attr) {
     
     //fallback for screen reader
     $result .= '<div class="carousel-fallback">';
-    $result .= '<h2>Featured content</h2>';
+    $result .= '<h2>' . esc_html__('Slideshow content', 'radial-svg-slider') . '</h2>';
     $result .= '<ul>';
     ////the loop
     while ($loop->have_posts()) {
         $loop->the_post();
         $result .= '<li><h3>' . get_the_title() . '</h3>';
         $alt = get_post_meta(get_post_thumbnail_id($post->ID), '_wp_attachment_image_alt', true);
-        if (count($alt)) {
-            $result .= '<p>Image description:' . $alt . '</p>';
+        if (!empty($alt)) {
+            $result .= '<p>' . esc_html__('Image description:', 'radial-svg-slider') . ' ' . $alt . '</p>';
         }
         $result .= '<p>' . get_the_content() . '</p>';
         $result .= '<a href="' . get_field('button_url') . '" tabindex="-1">' . get_field('button_text') . '</a>';
