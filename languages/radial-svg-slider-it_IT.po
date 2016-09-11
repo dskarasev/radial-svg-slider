@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: radial-svg-plugin\n"
-"POT-Creation-Date: 2016-09-07 18:40+0200\n"
-"PO-Revision-Date: 2016-09-07 18:40+0200\n"
+"POT-Creation-Date: 2016-09-09 19:51+0200\n"
+"PO-Revision-Date: 2016-09-09 19:51+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.9\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: esc_html_e;esc_html__\n"
+"X-Poedit-KeywordsList: esc_html_e;esc_html__;__;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: radial-svg-slider/js\n"
 
@@ -88,10 +88,52 @@ msgstr "Aggiungi nuovo slideshow"
 msgid "New Slideshow"
 msgstr "Nuovo slideshow"
 
-#: radialsvgslider.php:114
+#: radialsvgslider.php:98
+msgid "Radial SVG Slide option"
+msgstr "Opzioni Slide Radial SVG"
+
+#: radialsvgslider.php:102
+msgid "Button text"
+msgstr "Testo del bottone"
+
+#: radialsvgslider.php:105
+msgid "Type here the text of the button"
+msgstr "Inserisci qui il testo del bottone"
+
+#: radialsvgslider.php:115
+msgid "Button URL"
+msgstr "URL del bottone"
+
+#: radialsvgslider.php:118
+msgid "Type here the URL where the button takes to"
+msgstr "Inserisci qui l'URL della pagina dove porta il bottone"
+
+#: radialsvgslider.php:128
+msgid "Enhance elements visibility"
+msgstr "Aumenta visibilità degli elementi"
+
+#: radialsvgslider.php:131
+msgid ""
+"To enhance the visibility of the elemnts (texts and buttons) in your slide, "
+"flag this option."
+msgstr ""
+"Per aumentare la visibilità degli elementi (testo e bottone) nella tua "
+"slide, seleziona questa opzione."
+
+#: radialsvgslider.php:163
+msgid ""
+"Radial SVG Slideshow plugin need <a href=\"https://it.wordpress.org/plugins/"
+"advanced-custom-fields/\">Advanced Custom Fields</a> to be active to work "
+"properly."
+msgstr ""
+"Radial SVG Slideshow ha bisogno che il plugin <a href=\"https://it.wordpress."
+"org/plugins/advanced-custom-fields/\">Advanced Custom Fields</a> sia attivo "
+"per funzionare correttamente."
+
+#: radialsvgslider.php:193
 msgid "Slideshow content"
 msgstr "Contenuto slideshow"
 
-#: radialsvgslider.php:122
+#: radialsvgslider.php:201
 msgid "Image description:"
 msgstr "Descrizione immagine:"

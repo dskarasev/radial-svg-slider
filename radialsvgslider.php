@@ -3,7 +3,7 @@
     Plugin Name: Radial Svg Slider
     Description: WordPress plugin from Radial SVG Slider by CodyHouse.co
     Author: Antonio Trifirò
-    Text-domain: radial-svg-slider
+    Text domain: radial-svg-slider
     Domain path: /languages
     Version: 1.0
 */
@@ -91,8 +91,87 @@ function rsvgs_register_styles() {
 }
 
 // Custom fields
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_rsvgslideshow',
+		'title' => __('Radial SVG Slide option', 'radial-svg-slider'),
+		'fields' => array (
+			array (
+				'key' => 'field_57c6ba53bf040',
+				'label' => __('Button text', 'radial-svg-slider'),
+				'name' => 'button_text',
+				'type' => 'text',
+				'instructions' => __('Type here the text of the button', 'radial-svg-slider'),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57c6ba74bf041',
+				'label' => __('Button URL', 'radial-svg-slider'),
+				'name' => 'button_url',
+				'type' => 'text',
+				'instructions' => __('Type here the URL where the button takes to', 'radial-svg-slider'),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57c6f6939d30d',
+				'label' => __('Enhance elements visibility', 'radial-svg-slider'),
+				'name' => 'enhance_elements_visibility',
+				'type' => 'true_false',
+				'instructions' => __('To enhance the visibility of the elemnts (texts and buttons) in your slide, flag this option.', 'radial-svg-slider'),
+				'message' => '',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'rsvgs_slides',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
 
+// Check if Advanced Custom Field is active: if not, display a message in admin area
 
+function admin_message_warning() {
+    if ( !is_plugin_active('advanced-custom-fields/acf.php') ) {
+        ?>
+        <div class="notice notice-warning is-dismissible">
+            <p><?php _e( 'Radial SVG Slideshow plugin need <a href="https://it.wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a> to be active to work properly.', 'radial-svg-slider' ); ?></p>
+        </div>
+        <?php
+    }
+}
+add_action( 'admin_init', 'admin_message_warning' );
+
+// Implementing translation
+add_action('plugins_loaded', 'wan_load_textdomain');
+function wan_load_textdomain() {
+	load_plugin_textdomain( 'radial-svg-slider', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
+}
 
 // php function
 function rsvgs_function($slideshow_attr) {
