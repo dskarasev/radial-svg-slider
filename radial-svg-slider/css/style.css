@@ -1,36 +1,5 @@
 /* -------------------------------- 
 
-Primary style
-
--------------------------------- */
-/*
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
-  color: #0a0b15;
-  background-color: #ffffff;
-}
-
-a {
-  color: #6156a8;
-  text-decoration: none;
-}
-
-img, svg, image {
-  max-width: 100%;
-}
-*/
-
-/* -------------------------------- 
-
 Slider
 
 -------------------------------- */
