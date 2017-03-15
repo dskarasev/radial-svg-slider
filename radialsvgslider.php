@@ -157,7 +157,7 @@ if(function_exists("register_field_group"))
 // Check if Advanced Custom Field is active: if not, display a message in admin area
 
 function admin_message_warning() {
-    if ( !is_plugin_active('advanced-custom-fields/acf.php') ) {
+    if( !class_exists('acf') ) {
         ?>
         <div class="notice notice-warning is-dismissible">
             <p><?php _e( 'Radial SVG Slideshow plugin need <a href="https://it.wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a> to be active to work properly.', 'radial-svg-slider' ); ?></p>
